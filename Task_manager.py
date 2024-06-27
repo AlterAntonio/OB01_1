@@ -26,3 +26,12 @@ class Task():
         for task in self.tasks:
             if task['status'] == 'in_progress': print(f'{task['description']}: срок выполнения - {task['deadline']}')
 
+task = Task()
+task.add_task('Попрыгать на одной ноге', '25.06.24')
+task.add_task('Попрыгать на одной ноге', '26.06.24')
+task.task_done('Попрыгать на другой ноге')
+task.add_task('Попрыгать на другой ноге', '26.06.24')
+task.add_task('Отдохнуть', '27.06.24')
+task.task_done('Попрыгать на одной ноге')
+task.task_done('Попрыгать на другой ноге')
+task.show_tasks()
